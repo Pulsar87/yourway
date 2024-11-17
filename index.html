@@ -111,11 +111,8 @@ function getCoordinates()
   navigator.geolocation.getCurrentPosition(function(location) {
     var lat = location.coords.latitude;
     var lng = location.coords.longitude;
-    console.log("Location permission granted");
-    console.log("lat: " + lat + " - lng: " + lng);
-  },
   function(error) {
-    console.log("Location permission denied");
+    alert("لم تسمح باستخدام موقعك");
   });
 }
   L.Routing.control({
