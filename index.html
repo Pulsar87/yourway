@@ -82,11 +82,10 @@ var busIcon = L.icon({iconUrl:'images/bus.png',iconSize: [40, 40]});
 var microIcon = L.icon({iconUrl:'images/micro.png'});
 </script>
   <script>
-async function myAsyncFunction() {
-  try {
+	/*  
 if ("geolocation" in navigator) {
   // Prompt user for permission to access their location
-  await navigator.geolocation.getCurrentPosition(
+  navigator.geolocation.getCurrentPosition(
     // Success callback function
     (position) => {
       // Get the user's latitude and longitude coordinates
@@ -106,6 +105,19 @@ if ("geolocation" in navigator) {
   } catch (error) {
     alert("لم تسمح للمتصفح باستخدام موقعك "+error);
   }
+  */
+function getCoordinates()
+{
+  navigator.geolocation.getCurrentPosition(function(location) {
+    var lat = location.coords.latitude;
+    var lng = location.coords.longitude;
+    console.log("Location permission granted");
+    console.log("lat: " + lat + " - lng: " + lng);
+  },
+  function(error) {
+    console.log("Location permission denied");
+  });
+}
   L.Routing.control({
     waypoints:[L.latLng(startlat,startlng),L.latLng(endlat,endlng)],
     //serviceUrl: 'http://localhost:5000/route/v1',
