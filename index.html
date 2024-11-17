@@ -115,6 +115,7 @@ function getCoordinates()
     alert("لم تسمح باستخدام موقعك");
   });
 }
+getCoordinates();
   L.Routing.control({
     waypoints:[L.latLng(startlat,startlng),L.latLng(endlat,endlng)],
     //serviceUrl: 'http://localhost:5000/route/v1',
