@@ -109,23 +109,19 @@ if ("geolocation" in navigator) {
     // your other options go here
 }).addTo(map);
 //Bus markers
-    var bus1 = L.marker([33.524277,36.176426],
-  {alt: '123456',icon: busIcon}).addTo(bus);
+    var bus1 = L.marker([33.524277,36.176426]).addTo(bus);
 
 
   //taxi markers
-var taxi1 = L.marker([33.514277,36.166426],
-  {alt: '123456',icon: taxiIcon}).addTo(taxi);
+var taxi1 = L.marker([33.514277,36.166426]).addTo(taxi);
 
 
   //micro markers
-var micro1 = L.marker([33.544277,36.156426],
-  {alt: '123456',icon: microIcon}).addTo(micro);
+var micro1 = L.marker([33.544277,36.156426]).addTo(micro);
 
 
   //private markers
-var private1 = L.marker([33.564277,36.116426],
-  {alt: '123456',icon: privateIcon}).addTo(private);
+var private1 = L.marker([33.564277,36.116426]).addTo(private);
 //add overlays to the list
 layerControl.addOverlay(bus, 'باص');
 layerControl.addOverlay(taxi, 'تاكسي');
