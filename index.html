@@ -103,12 +103,10 @@ if ("geolocation" in navigator) {
     // Geolocation is not supported by the browser
     alert("الرجاء تغيير متصفحك لأنه قديم ولا يمكنه قراءة الموقع.");
     }
-	  var start = L.marker([startlat,startlng]).bindTooltip("from").openTooltip();
-	  var end = L.marker([endlat,endlng]).bindTooltip("to").openTooltip();
 
   L.Routing.control({
-    waypoints:[start,end],
-    serviceUrl: 'http://localhost:5000/route/v1',
+    waypoints:[L.latLng(startlat,startlng),L.latLng(endlat,endlng)],
+    //serviceUrl: 'http://localhost:5000/route/v1',
     routeWhileDragging: true
     // your other options go here
 }).addTo(map);
