@@ -118,7 +118,7 @@ function getCoordinates()
 getCoordinates();
   L.Routing.control({
     waypoints:[L.latLng(startlat,startlng),L.latLng(endlat,endlng)],
-    //serviceUrl: 'http://localhost:5000/route/v1',
+    serviceUrl: 'http://localhost:5000/route/v1',
     routeWhileDragging: true
     // your other options go here
 }).addTo(map);
