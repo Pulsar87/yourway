@@ -111,25 +111,25 @@ if ("geolocation" in navigator) {
 //Bus markers
     var bus1 = L.marker([33.524277,36.176426],
   {alt: '123456',icon: busIcon})
-  .bindPopup('رقم السيارة '123456' <br />متوجهة إلى 'المزة'<br /><br /><form method="POST" action="/reserve">@csrf<input type="hidden" value="'123456'" name="car" /><input type="hidden" value="'33.6456456'" name="lat" /><input type="hidden" value="'33.234235'" name="lng" /><select name="places" id="places"><option selected value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select> مقعد <br /><br /><input class="h-5 w-40 text-white rounded-lg bg-blue-500" type="submit" value="احجزلي ع طريقك" /></form>').addTo(bus);
+  .bindPopup("'رقم السيارة '123456' <br />متوجهة إلى 'المزة'<br /><br /><form method="POST" action="/reserve">@csrf<input type="hidden" value="'123456'" name="car" /><input type="hidden" value="'33.6456456'" name="lat" /><input type="hidden" value="'33.234235'" name="lng" /><select name="places" id="places"><option selected value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select> مقعد <br /><br /><input class="h-5 w-40 text-white rounded-lg bg-blue-500" type="submit" value="احجزلي ع طريقك" /></form>'").addTo(bus);
 
 
   //taxi markers
 var taxi1 = L.marker([33.514277,36.166426],
   {alt: '123456',icon: taxiIcon})
-  .bindPopup('رقم السيارة '123456' <br />متوجهة إلى 'المزة'<br /><br /><form method="POST" action="/reserve">@csrf<input type="hidden" value="'123456'" name="car" /><input type="hidden" value="'33.6456456'" name="lat" /><input type="hidden" value="'33.234235'" name="lng" /><select name="places" id="places"><option selected value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select> مقعد <br /><br /><input class="h-5 w-40 text-white rounded-lg bg-blue-500" type="submit" value="احجزلي ع طريقك" /></form>').addTo(taxi);
+  .bindPopup("'رقم السيارة '123456' <br />متوجهة إلى 'المزة'<br /><br /><form method="POST" action="/reserve">@csrf<input type="hidden" value="'123456'" name="car" /><input type="hidden" value="'33.6456456'" name="lat" /><input type="hidden" value="'33.234235'" name="lng" /><select name="places" id="places"><option selected value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select> مقعد <br /><br /><input class="h-5 w-40 text-white rounded-lg bg-blue-500" type="submit" value="احجزلي ع طريقك" /></form>'").addTo(taxi);
 
 
   //micro markers
 var micro1 = L.marker([33.544277,36.156426],
   {alt: '123456',icon: microIcon})
-  .bindPopup('رقم السيارة '123456' <br />متوجهة إلى 'المزة'<br /><br /><form method="POST" action="/reserve">@csrf<input type="hidden" value="'123456'" name="car" /><input type="hidden" value="'33.6456456'" name="lat" /><input type="hidden" value="'33.234235'" name="lng" /><select name="places" id="places"><option selected value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>مقعد<br /><br /><input class="h-5 w-40 text-white rounded-lg bg-blue-500" type="submit" value="احجزلي ع طريقك" /></form>').addTo(micro);
+  .bindPopup("'رقم السيارة '123456' <br />متوجهة إلى 'المزة'<br /><br /><form method="POST" action="/reserve">@csrf<input type="hidden" value="'123456'" name="car" /><input type="hidden" value="'33.6456456'" name="lat" /><input type="hidden" value="'33.234235'" name="lng" /><select name="places" id="places"><option selected value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>مقعد<br /><br /><input class="h-5 w-40 text-white rounded-lg bg-blue-500" type="submit" value="احجزلي ع طريقك" /></form>'").addTo(micro);
 
 
   //private markers
 var private1 = L.marker([33.564277,36.116426],
   {alt: '123456',icon: privateIcon})
-  .bindPopup('رقم السيارة '123456' <br />متوجهة إلى 'المزة'<br /><br /><form method="POST" action="/reserve">@csrf<input type="hidden" value="'123456'" name="car" /><input type="hidden" value="'33.6456456'" name="lat" /><input type="hidden" value="'33.234235'" name="lng" /><select name="places" id="places"><option selected value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select> مقعد <br /><br /><input class="h-5 w-40 text-white rounded-lg bg-blue-500" type="submit" value="احجزلي ع طريقك" /></form>').addTo(private);
+  .bindPopup("'رقم السيارة '123456' <br />متوجهة إلى 'المزة'<br /><br /><form method="POST" action="/reserve">@csrf<input type="hidden" value="'123456'" name="car" /><input type="hidden" value="'33.6456456'" name="lat" /><input type="hidden" value="'33.234235'" name="lng" /><select name="places" id="places"><option selected value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select> مقعد <br /><br /><input class="h-5 w-40 text-white rounded-lg bg-blue-500" type="submit" value="احجزلي ع طريقك" /></form>'").addTo(private);
 //add overlays to the list
 layerControl.addOverlay(bus, 'باص');
 layerControl.addOverlay(taxi, 'تاكسي');
