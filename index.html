@@ -82,7 +82,7 @@ var busIcon = L.icon({iconUrl:'images/bus.png',iconSize: [40, 40]});
 var microIcon = L.icon({iconUrl:'images/micro.png'});
 </script>
   <script>
-	/*  
+	
 if ("geolocation" in navigator) {
   // Prompt user for permission to access their location
   navigator.geolocation.getCurrentPosition(
@@ -105,27 +105,7 @@ if ("geolocation" in navigator) {
   } catch (error) {
     alert("لم تسمح للمتصفح باستخدام موقعك "+error);
   }
-  */
-$('#submit_latlng').click(function() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                getPosition,
-                positionError
-            )
-        }
 
-        function getPosition(position) {
-            document.getElementById('user_lat').value = position.coords.latitude;
-            document.getElementById('user_lng').value = position.coords.longitude;
-            $('#geo-loc-form').submit();
-        }
-
-        function positionError(error) {
-            if (error.PERMISSION_DENIED) alert('Location services are off. Please enable location services, or use zip code search.');
-                showError('Geolocation is not enabled.');
-        }
-
-    });
   L.Routing.control({
     waypoints:[L.latLng(startlat,startlng),L.latLng(endlat,endlng)],
     serviceUrl: 'http://localhost:5000/route/v1',
