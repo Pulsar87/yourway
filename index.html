@@ -85,7 +85,7 @@ var microIcon = L.icon({iconUrl:'images/micro.png'});
 	
 if ("geolocation" in navigator) {
   // Prompt user for permission to access their location
-  navigator.geolocation.getCurrentPosition(
+  await navigator.geolocation.getCurrentPosition(
     // Success callback function
     (position) => {
       // Get the user's latitude and longitude coordinates
