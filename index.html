@@ -105,7 +105,7 @@ if ("geolocation" in navigator) {
     }
 
   L.Routing.control({
-    waypoints:[L.latLng(startlat,startlng).bindPopup('from'),L.latLng(endlat,endlng)],
+    waypoints:[L.latLng(startlat,startlng).bindPopup('from'),L.latLng(endlat,endlng).bindPopup('from')],
     serviceUrl: 'http://localhost:5000/route/v1',
     routeWhileDragging: true
     // your other options go here
