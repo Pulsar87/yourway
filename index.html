@@ -85,13 +85,12 @@ var microIcon = L.icon({iconUrl:'images/micro.png'});
 	
 if ("geolocation" in navigator) {
   // Prompt user for permission to access their location
-	async function gl(){
-  await navigator.geolocation.getCurrentPosition(
+	navigator.geolocation.getCurrentPosition(
     // Success callback function
     (position) => {
       // Get the user's latitude and longitude coordinates
-     lat = position.coords.latitude;
-     lng = position.coords.longitude;
+     startlat = position.coords.latitude;
+     startlng = position.coords.longitude;
     },
     // Error callback function
     (error) => {
@@ -99,8 +98,6 @@ if ("geolocation" in navigator) {
       alert("لم نتمكن من معرفة مكانك.\nالرجاء تفعيل GPS وإعطاء الاذن لقراءة موقعك على الخريطة.\n", error);
     }
     );
-	}
-	gl();
     } else {
     // Geolocation is not supported by the browser
     alert("الرجاء تغيير متصفحك لأنه قديم ولا يمكنه قراءة الموقع.");
