@@ -111,7 +111,7 @@ if ("geolocation" in navigator) {
     // your other options go here
 }).addTo(map);
 //Bus markers
-    var bus1 = L.marker([33.524277,36.176426]).addTo(bus);
+    var bus1 = L.marker([33.524277,36.176426]).bindTooltip("my tooltip text").openTooltip().addTo(bus);
 
 
   //taxi markers
